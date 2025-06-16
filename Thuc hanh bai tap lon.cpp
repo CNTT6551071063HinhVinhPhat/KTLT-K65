@@ -69,8 +69,10 @@ void xoaSinhVien(SinhVien** head, int mssv) {
 }
 
 void sapXepTangDan(SinhVien** head) {
-    if (*head == NULL || (*head)->next == NULL)
+    if (*head == NULL || (*head)->next == NULL){
+	printf("danh sach trong khong the sap xep.");
         return;
+}
 
     SinhVien *i, *j;
     for (i = *head; i != NULL; i = i->next) {
@@ -100,9 +102,10 @@ void sapXepTangDan(SinhVien** head) {
 }
 
 void sapXepGiamDan(SinhVien** head) {
-    if (*head == NULL || (*head)->next == NULL)
+    if (*head == NULL || (*head)->next == NULL){
+	printf("danh sach trong khong the sap xep.");
         return;
-
+}
     SinhVien *i, *j;
     for (i = *head; i != NULL; i = i->next) {
         for (j = i->next; j != NULL; j = j->next) {
